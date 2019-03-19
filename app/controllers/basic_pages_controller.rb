@@ -1,0 +1,2 @@
+class BasicPagesController < ApplicationController
+end
