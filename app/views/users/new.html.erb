@@ -1,2 +1,46 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, "Signup") %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1> Sign Up</h1>
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user, url: signup_path) do |form_element| %>
+      <%= render 'shared/error_messages' %>
+
+      <!-- first name -->
+      <%= form_element.label :name, "First Name" %>
+      <%= form_element.text_field :firstName, class:'form-control' %>
+
+      <!-- last name -->
+      <%= form_element.label :name, "Last Name" %>
+      <%= form_element.text_field :lastName, class:'form-control' %>
+
+      <!-- username -->
+      <%= form_element.label :username %>
+      <%= form_element.text_field :username, class:'form-control' %>
+
+      <!-- email -->
+      <%= form_element.label :email %>
+      <%= form_element.text_field :email, class:'form-control' %>
+
+      <!-- password -->
+      <%= form_element.label :password %>
+      <%= form_element.text_field :password, class:'form-control' %>
+
+      <!-- password_confirmation -->
+      <%= form_element.label :name, "Password Confirmation"%>
+      <%= form_element.text_field :password_confirmation, class:'form-control' %>
+
+      <!-- submit button -->
+      <%= form_element.submit "Create my Account", class: "btn btn-primary" %>
+      <% end %>
+
+    </div>
+
+  </body>
+</html>

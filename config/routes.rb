@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   get '/about', to:'basic_pages#about'
   get '/contact', to: 'basic_pages#contact'
   get '/signup/', to: 'users#new'
+  post '/signup', to: 'users#create'
+
+  resources :users
 
 end
