@@ -1,0 +1,34 @@
+<% provide(:title, "Login") %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1> Login </h1>
+
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+
+        <%= form_for(:session, url: login_path) do |form_element| %>
+
+        <%= form_element.label :Email %>
+        <%= form_element.email_field :email, class: 'form-control' %>
+
+        <%= form_element.label :password%>
+        <%= form_element.password_field :password, class: 'form-control' %>
+
+        <%= form_element.submit :Login, class: 'btn btn-primary' %>
+        <% end %>
+
+        <p> New user ? <%= link_to "Signup Now ! ", signup_path %> </p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
