@@ -12,5 +12,6 @@
     If you do, make sure you're <a href="/login"> <span style="color: red; text-style: bold;"> logged in </span> </a> and press the button below.
   </h2><br>
 
-  <%= link_to "Find my location", findLocation_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Find My Location", findLocation_path, class: "btn btn-primary" if(logged_in?) %>
+
 </div>
