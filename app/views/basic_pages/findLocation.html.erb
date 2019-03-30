@@ -1,0 +1,14 @@
+<% provide(:title, "Find My Location") %>
+
+<div class="center jumbotron">
+
+    <h1> We want to detect your location </h1>
+    <h6 id="flh"> Please allow location services in settings if there's a problem </h6>
+
+
+          <div id="map"></div>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFj1INSrP31N6gxnp0YJhCBnjZLx3t-uc&libraries=places&callback=initMap"
+             async defer></script> <br>
+
+          <%= link_to "Yes this is my location, continue", nearbyRestaurants_path, class: "btn btn-primary" %>
+</div>

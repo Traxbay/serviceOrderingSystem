@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get    '/about',   to:'basic_pages#about'
   get    '/contact', to: 'basic_pages#contact'
   get    '/signup/', to: 'users#new'
+  get '/findLocation', to:"basic_pages#findLocation"
+  get '/nearbyRestaurants', to: 'basic_pages#nearbyRestaurants'
   post   '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

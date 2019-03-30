@@ -9,4 +9,10 @@ class BasicPagesController < ApplicationController
   def contact
   end
 
+  def findLocation
+  end
+
+  def nearbyRestaurants
+  end
+
 end
