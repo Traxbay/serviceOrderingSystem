@@ -27,5 +27,19 @@ class BasicPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | #{@base_title}"
   end
 
+  test "should get findLocation" do
+    get findLocation_path
+    assert_response :success
+    assert_select "title" , "Find My Location | #{@base_title}"
+  end
+
+  test "should get nearbyRestaurants" do
+    get nearbyRestaurants_path
+    assert_response :success
+    assert_select "title", "Available Restaurants | #{@base_title}"
+  end
+
+
+
 
 end
