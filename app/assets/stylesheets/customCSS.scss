@@ -254,23 +254,21 @@ input {
   color: red;
 }
 
+
 .homepic{
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   width: 750px;
-
-  height: auto;
 }
 
-.aboutpic{
-  width: 100%;
-  width: 500px;
+  .aboutpic{
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+  }
 
-  height: auto;
-}
-
-.contactpic{
-  width: 100%;
-  width: 700px;
-
-  height: auto;
-}
+  .contactpic{
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+  }
