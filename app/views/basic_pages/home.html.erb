@@ -5,13 +5,17 @@
   <%= image_tag "homepic.jpg", class: "homepic" %>
 
   <h2>
-    To start using our website, we need to get your location first !
+    To start using our website, we need to get your location first.
   </h2>
   <h2> if you don't know what our website is for, please visit the
     <a href="/about"> about page </a>.
     If you do, make sure you're <a href="/login"> <span style="color: red; text-style: bold;"> logged in </span> </a> and press the button below.
   </h2><br>
 
-  <%= link_to "Find My Location", findLocation_path, class: "btn btn-primary" if(logged_in?) %>
+  <% if logged_in? %>
+  <%= link_to "Find My Location", findLocation_path, class: "btn btn-primary"%>
+  <% else %>
+  <%= link_to "Find My Location", login_path, class: "btn btn-primary"%>
+  <% end %>
 
 </div>
