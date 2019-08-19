@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails',        '5.1.6'
 gem 'savon', '~> 2.0'
+gem 'wdm', ' >= 0.1.0' if Gem.win_platform?
 gem 'faker',          '1.7.3'
 gem 'bcrypt',         '3.1.12'
 gem 'bootstrap-sass', '3.4.1'
